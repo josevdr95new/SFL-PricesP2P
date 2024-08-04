@@ -161,9 +161,9 @@ th {
 .donation-modal-content {
   background-color: #fefefe;
   margin: 15% auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
-  width: 30%;
+  width: 90%;
   animation: slideIn 0.5s ease-in-out;
 }
 
