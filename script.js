@@ -68,8 +68,7 @@ window.addEventListener('click', (event) => {
   }
 });
 
-// ... (previous JavaScript content) ...
-
+//Search
 function filterTable() {
   const searchInput = document.getElementById('searchInput');
   const searchTerm = searchInput.value.toLowerCase().trim();
@@ -90,5 +89,3 @@ function filterTable() {
 }
 
 document.getElementById('searchInput').addEventListener('input', filterTable);
-
-// ... (rest of the JavaScript content) ...
