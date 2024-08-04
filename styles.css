@@ -219,7 +219,7 @@ th {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
 #version{
-    font-weight: bold; /* Negrita para el texto de la versión */
-    color: #007BFF; /* Color azul */
+  font-weight: bold;
+  color: #007BFF;
+}
