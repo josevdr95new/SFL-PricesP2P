@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "SFL Prices P2P",
-  "version": "1.8",
+  "version": "1.0",
   "description": "Shows prices for SFL World (P2P) items",
   "browser_action": {
     "default_popup": "popup.html",
