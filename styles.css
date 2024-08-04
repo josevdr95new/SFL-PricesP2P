@@ -220,8 +220,6 @@ th {
 }
 
 
-body > div > div.credits > p:nth-child(1){
-	 color: black ;
-	 text-decoration-line: underline;
-     font-weight: bold;
-}
+#version{
+    font-weight: bold; /* Negrita para el texto de la versión */
+    color: #007BFF; /* Color azul */
