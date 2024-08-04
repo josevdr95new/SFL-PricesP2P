@@ -220,6 +220,14 @@ th {
 }
 
 #version{
-    font-weight: bold;
-    color: #007BFF;
+  font-weight: bold;
+  color: #007BFF;
 }
+
+#donationModal > div > p.wallet-address{
+  font-weight: bold;
+  color: blue;
+}
+
+
+
