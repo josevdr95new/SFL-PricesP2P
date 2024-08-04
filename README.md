@@ -1,18 +1,44 @@
-Guide to Manually Install Unpacked Extensions in Chrome
-If you have a Chrome extension in unpacked format (for example, a folder containing the extension files), you can manually install it by following these steps:
-Step 1: Prepare the Extension
-Download the Extension: Ensure you have the unpacked extension folder on your computer. This folder should contain a manifest.json file along with other necessary files.
-Step 2: Open Chrome
-Launch Google Chrome: Make sure you are using the latest version of Chrome.
-Step 3: Access the Extensions Page
-Go to the Extensions Page: Type chrome://extensions/ in the address bar and press Enter.
-Step 4: Enable Developer Mode
-Turn on Developer Mode: In the upper right corner of the extensions page, you will find a toggle switch labeled "Developer mode." Turn it on by clicking the switch.
-Step 5: Load the Unpacked Extension
-Load the Extension: Click on the "Load unpacked" button located at the top left of the page.
-Select the Folder: Navigate to the folder where your unpacked extension is located and select it. Then click "Select Folder."
-Step 6: Verify the Installation
-Check the Extension: Once loaded, the extension should appear in the list of installed extensions. You can enable or disable it from there.
-Step 7: Use the Extension
-Access the Extension: If the extension has an icon, it will appear to the right of the address bar. Click on it to use the extension.
-By following these steps, you can manually install unpacked extensions in Chrome. Enjoy your customized browsing experience!
+# Manual Installation Guide for Chrome Extensions
+
+This guide will show you how to manually install Chrome extensions using uncompressed files. This is useful if you have downloaded an extension in ZIP format or if you are developing your own extension.
+
+## Prerequisites
+
+- Google Chrome installed on your computer.
+- The extension files uncompressed in a folder.
+
+## Steps to Install the Extension
+
+1. **Download and Unzip the Extension**
+   - If you downloaded the extension in ZIP format, unzip it to a folder of your choice.
+
+2. **Open Google Chrome**
+   - Launch Google Chrome on your computer.
+
+3. **Access the Extensions Page**
+   - Click on the three dots icon in the upper right corner of Chrome.
+   - Select `More tools` > `Extensions`.
+
+4. **Enable Developer Mode**
+   - In the upper right corner of the extensions page, toggle the switch that says `Developer mode`.
+
+5. **Load the Uncompressed Extension**
+   - Click on the `Load unpacked` button.
+   - Navigate to the folder where you unzipped the extension files and select it.
+   - Click on `Select Folder`.
+
+6. **Verify the Installation**
+   - The extension should now appear in the list of installed extensions. Make sure it is enabled.
+
+## Troubleshooting
+
+- **The extension does not load**: Ensure that the selected folder contains a valid `manifest.json` file.
+- **Permission errors**: Check the permissions requested in the `manifest.json` file and ensure they are correct.
+
+## Uninstalling the Extension
+
+If you wish to uninstall the extension:
+
+1. Go to the extensions page (as described above).
+2. Find the extension you want to remove.
+3. Click the `Remove` button and confirm the action.
