@@ -220,3 +220,10 @@ th {
 }
 
 /* ... (rest of the CSS content) ... */
+
+
+body > div > div.credits > p:nth-child(1){
+	 color: black ;
+	 text-decoration-line: underline;
+     font-weight: bold;
+}
