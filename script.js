@@ -13,9 +13,9 @@ fetch('https://sfl.world/api/v1/prices')
     // Crear encabezado de la tabla
     const headerRow = document.createElement('tr');
     const itemHeader = document.createElement('th');
-    itemHeader.textContent = 'Article';
+    itemHeader.textContent = 'Article (P2P)';
     const priceHeader = document.createElement('th');
-    priceHeader.textContent = 'Price';
+    priceHeader.textContent = 'Price (SFL)';
     headerRow.appendChild(itemHeader);
     headerRow.appendChild(priceHeader);
     tableHeader.appendChild(headerRow);
