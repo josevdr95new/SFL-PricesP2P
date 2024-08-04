@@ -1,3 +1,7 @@
+# Contact
+josevdr95@gmail.com
+
+
 # Manual Installation Guide for Chrome Extensions
 
 This guide will show you how to manually install Chrome extensions using uncompressed files. This is useful if you have downloaded an extension in ZIP format or if you are developing your own extension.
