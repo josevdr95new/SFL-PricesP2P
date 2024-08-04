@@ -1,5 +1,4 @@
 Guide to Manually Install Unpacked Extensions in Chrome
-If you have a Chrome extension in unpacked format (for example, a folder containing the extension files), you can manually install it by following these steps:
 Step 1: Prepare the Extension
 Download the Extension: Ensure you have the unpacked extension folder on your computer. This folder should contain a manifest.json file along with other necessary files.
 Step 2: Open Chrome
