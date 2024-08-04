@@ -1,5 +1,4 @@
-# Contact
-josevdr95@gmail.com
+# Contact: josevdr95@gmail.com
 
 ![SFL Prices P2P](images/app.png)
 
