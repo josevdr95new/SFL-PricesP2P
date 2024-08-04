@@ -9,5 +9,8 @@
   },
   "permissions": [
     "https://sfl.world/api/v1/prices"
-  ]
+  ],
+  "icons": {
+    "48": "images/icon.png"
+  }
 }
