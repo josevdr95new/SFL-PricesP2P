@@ -89,3 +89,11 @@ function filterTable() {
 }
 
 document.getElementById('searchInput').addEventListener('input', filterTable);
+
+// Version
+// Obtener la versión del manifiesto
+const manifest = chrome.runtime.getManifest();
+const version = manifest.version;
+
+// Mostrar la versión en el elemento HTML
+document.getElementById('version').textContent = version;
