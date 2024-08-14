@@ -202,8 +202,6 @@ th {
   text-decoration: underline;
 }
 
-
-
 .search-container {
   display: flex;
   justify-content: center;
@@ -211,7 +209,7 @@ th {
 }
 
 .search-container input {
-  width: 300px;
+  width: 400px;
   padding: 8px 12px;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -219,15 +217,20 @@ th {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#version{
+table td input[type="number"] {
+  width: 48px;
+  padding: 4px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#version {
   font-weight: bold;
   color: #007BFF;
 }
 
-#donationModal > div > p.wallet-address{
+#donationModal > div > p.wallet-address {
   font-weight: bold;
   color: blue;
 }
-
-
-

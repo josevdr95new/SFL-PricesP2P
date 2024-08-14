@@ -1,47 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SFL Prices P2P</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <img src="images/icon.png" alt="SFL Prices P2P" class="header-icon">
+      <img src="images\icon.png" alt="Header Icon" class="header-icon">
       <h1>SFL Prices P2P</h1>
     </div>
-	 <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search..." oninput="filterTable()">
+	<div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search by item or price">
     </div>
+
     <div id="priceData"></div>
-    <p id="updatedAt" class="updated-text"></p>
-    <div id="loading" class="loading-container">
+
+    <div class="loading-container" id="loading">
       <div class="loading-spinner"></div>
-      <p>Cargando precios...</p>
+      <p>Loading prices...</p>
     </div>
-    <div id="donationContainer" class="donation-container">
-      <button class="donation-button" id="donationButton">
-        <img src="images/donate.png" alt="Donar" class="donation-icon">
+
+    <div class="donation-container">
+      <a href="#" class="donation-button" id="donationButton">
+        <img src="images\donate.png" alt="Donation Icon" class="donation-icon">
         Donate
-      </button>
+      </a>
     </div>
-    <div id="donationModal" class="donation-modal">
+
+    <div class="donation-modal" id="donationModal">
       <div class="donation-modal-content">
         <span class="close-button">&times;</span>
-        <h2>Donation</h2>
         <p>You can donate only Matic to the following wallet (Polygon Matic)</p>
         <p class="wallet-address">0xc218c27Ea8DBdEB83a8b539Ea1e36d2A54EB002c</p>
       </div>
     </div>
-    <div class="credits">
+
+    <p class="updated-text" id="updatedAt"></p>
+
+ <div class="credits">
     <p>Version: <span id="version"></span></p>
       <p>Developed by <a href="https://github.com/josevdr95new" target="_blank">josevdr95 and GPT 3.5</a></p>
 	  <p>API <a href="https://sfl.world/" target="_blank">sfl.world</a></p>
       <p>Visit the <a href="https://github.com/josevdr95new/SFL-PricesP2P" target="_blank"> GitHub repository</a></p>
     </div>
   </div>
- 
+
   <script src="script.js"></script>
 </body>
 </html>

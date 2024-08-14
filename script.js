@@ -16,8 +16,14 @@ fetch('https://sfl.world/api/v1/prices')
     itemHeader.textContent = 'Article (P2P)';
     const priceHeader = document.createElement('th');
     priceHeader.textContent = 'Price (SFL)';
+    const quantityHeader = document.createElement('th');
+    quantityHeader.textContent = 'Quantity';
+    const totalHeader = document.createElement('th');
+    totalHeader.textContent = 'Total (SFL)';
     headerRow.appendChild(itemHeader);
     headerRow.appendChild(priceHeader);
+    headerRow.appendChild(quantityHeader);
+    headerRow.appendChild(totalHeader);
     tableHeader.appendChild(headerRow);
 
     // Crear filas de la tabla
@@ -27,8 +33,23 @@ fetch('https://sfl.world/api/v1/prices')
       itemCell.textContent = item;
       const priceCell = document.createElement('td');
       priceCell.textContent = price.toFixed(6);
+      const quantityCell = document.createElement('td');
+      const quantityInput = document.createElement('input');
+      quantityInput.type = 'number';
+      quantityInput.value = '1';
+      quantityInput.min = '1';
+	  
+      quantityInput.addEventListener('input', () => {
+        const totalCell = row.querySelector('td:last-child');
+        totalCell.textContent = (price * quantityInput.value).toFixed(6);
+      });
+      quantityCell.appendChild(quantityInput);
+      const totalCell = document.createElement('td');
+      totalCell.textContent = price.toFixed(6);
       row.appendChild(itemCell);
       row.appendChild(priceCell);
+      row.appendChild(quantityCell);
+      row.appendChild(totalCell);
       tableBody.appendChild(row);
     });
 
@@ -68,7 +89,7 @@ window.addEventListener('click', (event) => {
   }
 });
 
-//Search
+// Search
 function filterTable() {
   const searchInput = document.getElementById('searchInput');
   const searchTerm = searchInput.value.toLowerCase().trim();
@@ -76,7 +97,7 @@ function filterTable() {
 
   tableRows.forEach(row => {
     const itemCell = row.querySelector('td:first-child');
-    const priceCell = row.querySelector('td:last-child');
+    const priceCell = row.querySelector('td:nth-child(2)');
     const itemText = itemCell.textContent.toLowerCase();
     const priceText = priceCell.textContent.toLowerCase();
 
