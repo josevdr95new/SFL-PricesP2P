@@ -70,7 +70,8 @@ fetch('https://sfl.world/api/v1/prices')
     loadingContainer.style.display = 'flex';
     loadingContainer.querySelector('p').textContent = 'Error loading prices. Try again later.';
   });
-
+  
+ //donation
 const donationButton = document.getElementById('donationButton');
 const donationModal = document.getElementById('donationModal');
 const closeButton = document.getElementsByClassName('close-button')[0];
