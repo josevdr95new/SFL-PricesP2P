@@ -1,236 +1,570 @@
+/* Estilos generales para el cuerpo */
 body {
-  font-family: 'Press Start 2P', cursive;
-  margin: 0;
-  padding: 0;
-  background-color: #8bc34a;
-  color: #333;
+  font-family: 'Press Start 2P', cursive; /* Fuente personalizada */
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin relleno */
+  background-color: #8bc34a; /* Color de fondo verde claro */
+  color: #333; /* Color de texto gris oscuro */
+  font-size: 16px; /* Tamaño de fuente general */
 }
 
+/* Contenedor principal */
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Ancho máximo */
+  margin: 0 auto; /* Centrando horizontalmente */
+  padding: 15px; /* Relleno interno */
+  background-color: #fff; /* Color de fondo blanco */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  border-radius: 8px; /* Bordes redondeados */
+  animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Opacidad inicial */
+    transform: translateY(20px); /* Desplazamiento inicial */
+  }
+  100% {
+    opacity: 1; /* Opacidad final */
+    transform: translateY(0); /* Desplazamiento final */
+  }
+}
+
+/* Encabezado */
+.header {
+  display: flex; /* Uso de flexbox */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+.header-icon {
+  width: 30px; /* Ancho del icono */
+  height: 30px; /* Alto del icono */
+  margin-right: 5px; /* Espacio a la derecha */
+}
+
+/* Estilo de título */
+h1 {
+  font-size: 24px; /* Tamaño de fuente */
+  text-align: center; /* Alineación centrada */
+  color: #4caf50; /* Color verde */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%; /* Ancho completo */
+  border-collapse: collapse; /* Colapso de bordes */
+  border-radius: 6px; /* Bordes redondeados */
+  overflow: hidden; /* Ocultar desbordamiento */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  background-color: #f2f2f2; /* Color de fondo */
+  animation: slideIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Animación de entrada de la tabla */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-20px); /* Desplazamiento inicial */
+    opacity: 0; /* Opacidad inicial */
+  }
+  100% {
+    transform: translateX(0); /* Desplazamiento final */
+    opacity: 1; /* Opacidad final */
+  }
+}
+
+/* Estilos para las celdas de la tabla */
+th, td {
+  padding: 8px 10px; /* Relleno interno */
+  text-align: left; /* Alineación a la izquierda */
+  border-bottom: 1px solid #ddd; /* Borde inferior */
+}
+
+/* Estilos para las celdas de encabezado */
+th {
+  background-color: #4caf50; /* Color de fondo verde */
+  color: white; /* Color de texto blanco */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 14px; /* Tamaño de fuente */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+}
+
+td {
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Contenedor de carga */
+.loading-container {
+  display: none; /* Oculto por defecto */
+  flex-direction: column; /* Dirección de columnas */
+  align-items: center; /* Alineación centrada */
+  justify-content: center; /* Justificación centrada */
+  margin-top: 10px; /* Espacio superior */
+  animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Spinner de carga */
+.loading-spinner {
+  border: 4px solid #4caf50; /* Borde verde */
+  border-top-color: transparent; /* Borde superior transparente */
+  border-radius: 50%; /* Bordes redondeados */
+  width: 30px; /* Ancho */
+  height: 30px; /* Alto */
+  animation: spin 1s linear infinite; /* Animación de giro */
+}
+
+/* Animación de carga */
+@keyframes spin {
+  from { transform: rotate(0deg); } /* Inicio */
+  to { transform: rotate(360deg); } /* Fin */
+}
+
+/* Contenedor de donación */
+.donation-container {
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Justificación centrada */
+  margin-top: 10px; /* Espacio superior */
+  animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Botón de donación */
+.donation-button {
+  display: flex; /* Uso de flexbox */
+  align-items: center; /* Alineación vertical */
+  background-color: #4caf50; /* Color de fondo verde */
+  color: white; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  padding: 8px 12px; /* Relleno interno */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 16px; /* Tamaño de fuente */
+  font-family: 'Press Start 2P', cursive; /* Fuente personalizada */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Manito en cursor */
+  transition: background-color 0.3s, transform 0.3s; /* Transición de color y transformación */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Efecto hover en el botón de donación */
+.donation-button:hover {
+  background-color: #45a049; /* Color de fondo al pasar el ratón */
+  transform: scale(1.05); /* Escalar */
+}
+
+.donation-icon {
+  width: 20px; /* Ancho del icono */
+  height: 20px; /* Alto del icono */
+  margin-right: 5px; /* Espacio a la derecha */
+}
+
+/* Texto de actualización */
+.updated-text {
+  text-align: center; /* Alineación centrada */
+  font-size: 14px; /* Tamaño de fuente */
+  color: #888; /* Color de texto gris claro */
+  margin-top: 5px; /* Espacio superior */
+  animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Modal de donación */
+.donation-modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Posición fija */
+  z-index: 1; /* En el frente */
+  left: 0; /* A la izquierda */
+  top: 0; /* Arriba */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  overflow: auto; /* Desbordamiento automático */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+  animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Contenido del modal de donación */
+.donation-modal-content {
+  background-color: #fefefe; /* Color de fondo */
+  margin: 15% auto; /* Márgenes */
+  padding: 10px; /* Relleno interno */
+  border: 1px solid #888; /* Borde */
+  width: 90%; /* Ancho */
+  animation: slideIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Botón de cerrar el modal */
+.close-button {
+  color: #aaa; /* Color del texto */
+  float: right; /* Alineado a la derecha */
+  font-size: 24px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+}
+
+/* Efecto hover en el botón de cerrar */
+.close-button:hover,
+.close-button:focus {
+  color: black; /* Cambio de color */
+  text-decoration: none; /* Sin subrayado */
+  cursor: pointer; /* Manito en cursor */
+}
+
+/* Dirección de la billetera */
+.wallet-address {
+  word-break: break-all; /* Corte de palabras */
+}
+
+/* Créditos */
+.credits {
+  margin-top: 10px; /* Espacio superior */
+  text-align: center; /* Alineación centrada */
+  font-size: 14px; /* Tamaño de fuente */
+  color: #888; /* Color de texto gris claro */
+  animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Enlaces en los créditos */
+.credits a {
+  color: #4caf50; /* Color verde */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Efecto hover en los enlaces de los créditos */
+.credits a:hover {
+  text-decoration: underline; /* Subrayado */
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Justificación centrada */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Input de búsqueda */
+.search-container input {
+  width: 350px; /* Ancho */
+  padding: 8px 10px; /* Relleno interno */
+  font-size: 14px; /* Tamaño de fuente */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: box-shadow 0.3s; /* Transición de sombra */
+}
+
+.search-container input:focus {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+}
+
+/* Input para celdas de tabla */
+table td input[type="number"] {
+  width: 40px; /* Ancho */
+  padding: 6px 8px; /* Relleno interno */
+  font-size: 14px; /* Tamaño de fuente */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilo para el ID de versión */
+#version {
+  font-weight: bold; /* Negrita */
+  color: #007BFF; /* Color azul */
+}
+
+/* Estilo específico para la dirección de la billetera en el modal */
+#donationModal > div > p.wallet-address {
+  font-weight: bold; /* Negrita */
+  color: blue; /* Color azul */
+  font-size: 15px;
+}
+
+/* Botón para mostrar la calculadora */
+.show-calculator-button {
+  background-color: #007bff; /* Color de fondo azul */
+  color: #fff; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 8px 12px; /* Relleno interno */
+  font-size: 14px; /* Tamaño de fuente */
+  cursor: pointer; /* Manito en cursor */
+  transition: background-color 0.3s ease; /* Transición de color */
+  display: block; /* Bloque */
+  margin: 0 auto 10px; /* Centrando y espacio inferior */
+}
+
+/* Efecto hover en el botón de mostrar la calculadora */
+.show-calculator-button:hover {
+  background-color: #0056b3; /* Cambio de color */
+}
+
+/* Contenedor de la calculadora */
+.calculator {
+  display: none; /* Oculto por defecto */
+  background-color: #fff; /* Color de fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mejorada */
+  padding: 20px; /* Relleno interno */
+  margin-bottom: 20px; /* Espacio inferior */
+  max-width: 400px; /* Ancho máximo */
+  margin: 0 auto 20px; /* Centrado y espacio inferior */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Mostrar la calculadora */
+.calculator.show {
+  display: block; /* Mostrar */
+}
+
+/* Título de la calculadora */
+.calculator h2 {
+  font-size: 20px; /* Tamaño de fuente */
+  margin-bottom: 15px; /* Espacio inferior */
+  text-align: center; /* Alineación centrada */
+  color: #007bff; /* Color azul */
+  text-transform: uppercase; /* Transformar texto a mayúsculas */
+}
+
+/* Grupo de input */
+.input-group {
+  display: flex; /* Uso de flexbox */
+  align-items: center; /* Alineación vertical */
+  margin-bottom: 15px; /* Espacio inferior */
+}
+
+/* Etiqueta de input */
+.input-group label {
+  width: 100px; /* Ancho */
+  font-size: 14px; /* Tamaño de fuente */
+  margin-right: 10px; /* Espacio a la derecha */
+  color: #333; /* Color del texto */
+  text-transform: uppercase; /* Transformar texto a mayúsculas */
+}
+
+/* Input y select */
+.input-group input,
+.input-group select {
+  flex: 1; /* Flexibilidad */
+  padding: 8px 10px; /* Relleno interno */
+  font-size: 14px; /* Tamaño de fuente */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: border-color 0.3s ease-in-out; /* Transición de borde */
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #007bff; /* Color de borde al enfocar */
+}
+
+/* Botón de conversión */
+.convert-button {
+  background-color: #007bff; /* Color de fondo azul */
+  color: #fff; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px 15px; /* Relleno interno */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Manito en cursor */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición de color y transformación */
+  display: block; /* Bloque */
+  margin: 15px auto 0; /* Centrando y espacio superior */
+}
+
+/* Efecto hover en el botón de conversión */
+.convert-button:hover {
+  background-color: #0056b3; /* Cambio de color */
+  transform: scale(1.05); /* Escalar */
+}
+
+/* Resultado de la conversión */
+#result {
+  text-align: center; /* Alineación centrada */
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  margin-top: 15px; /* Espacio superior */
+  color: #007bff; /* Color azul */
+}
+
+/* Contenedor de datos de precios */
+#priceData {
+  max-height: 250px; /* Altura máxima */
+  overflow-y: auto; /* Desbordamiento vertical automático */
+}
+
+/* Tabla dentro del contenedor de datos de precios */
+#priceData table {
+  width: max-content; /* Ancho máximo del contenido */
+  min-width: 100%; /* Ancho mínimo */
+}
+
+/* Contenedor de tarifa de gas */
+.gas-tariff-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
   animation: fadeIn 0.5s ease-in-out;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+/* Estilo para la tarifa de gas */
+.gas-tariff {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 5px;
+}
+
+/* Estilo para la última actualización */
+.last-update {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Estilos específicos para diferentes tarifas de gas */
+.gas-tariff-low {
+  color: #4caf50; /* Verde para tarifas bajas */
+}
+
+.gas-tariff-medium {
+  color: #ff9800; /* Naranja para tarifas medianas */
+}
+
+.gas-tariff-high {
+  color: #f44336; /* Rojo para tarifas altas */
+}
+
+
+.notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.notification-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.notification-error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* ... otros tipos de notificaciones ... */
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
   }
-  100% {
-    opacity: 1;
+  to {
     transform: translateY(0);
   }
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.header-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-
-h1 {
-  font-size: 24px;
-  text-align: center;
-  color: #4caf50;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #f2f2f2;
-  animation: slideIn 0.5s ease-in-out;
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-20px);
-    opacity: 0;
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
   }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
+  to {
+    transform: translateY(-100%);
   }
 }
 
-th, td {
-  padding: 12px 16px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+/* Para ocultar la notificación */
+.notification.hide {
+  animation: slideOut 0.3s ease-in-out forwards;
 }
 
-th {
-  background-color: #4caf50;
-  color: white;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.loading-container {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.loading-spinner {
-  border: 4px solid #4caf50;
-  border-top-color: transparent;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.donation-container {
+#prices {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.donation-button {
-  display: flex;
-  align-items: center;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  text-decoration: none;
-  font-size: 16px;
-  font-family: 'Press Start 2P', cursive;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.donation-button:hover {
-  background-color: #45a049;
-}
-
-.donation-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-}
-
-.updated-text {
-  text-align: center;
-  font-size: 12px;
-  color: #888;
-  margin-top: 10px;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.donation-modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.donation-modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 10px;
-  border: 1px solid #888;
-  width: 90%;
-  animation: slideIn 0.5s ease-in-out;
-}
-
-.close-button {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem; /* Reducimos el espacio entre elementos */
   font-weight: bold;
+  font-size: 12px; /* Reducimos el tamaño de la fuente */
+  color: #336699;
 }
 
-.close-button:hover,
-.close-button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+ 
+
+#linkButton {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 10px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la parte izquierda */
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+   justify-content: center;
 }
 
-.wallet-address {
-  word-break: break-all;
+
+#linkButton:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
 }
 
-.credits {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 12px;
-  color: #888;
-  animation: fadeIn 0.5s ease-in-out;
+#myList {
+    margin-top: 20px;
+    padding: 0;
+    list-style-type: none; /* Elimina los puntos de la lista */
 }
 
-.credits a {
-  color: #4caf50;
-  text-decoration: none;
+#myList li {
+    background-color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
-.credits a:hover {
-  text-decoration: underline;
+#myList li:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
 }
 
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+#myList a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #007BFF; /* Color azul para los enlaces */
+    font-weight: bold;
 }
 
-.search-container input {
-  width: 400px;
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+#myList a:hover {
+    text-decoration: underline; /* Subrayar el enlace al pasar el mouse */
+}
+ 
+.disclaimer {
+
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
+}
+.disclaimer p {
+    margin: 0;
+}
+.disclaimer strong {
+    color: #d9534f; /* Red color for the disclaimer title */
 }
 
-table td input[type="number"] {
-  width: 48px;
-  padding: 4px 8px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-#version {
-  font-weight: bold;
-  color: #007BFF;
-}
-
-#donationModal > div > p.wallet-address {
-  font-weight: bold;
-  color: blue;
+.donation-button i {
+    margin-right: 8px; /* Ajusta el valor según sea necesario */
 }

@@ -5,49 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SFL Prices P2P</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <img src="images\icon.png" alt="Header Icon" class="header-icon">
+    <!-- Encabezado de la página -->
+    <header class="header">
+      <img src="images/icon.png" alt="Header Icon" class="header-icon">
       <h1>SFL Prices P2P</h1>
-    </div>
-	<div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search by item or price">
+    </header>
+	
+<button id="linkButton"><i class="fas fa-link"></i></button>
+
+<ul id="myList" style="display: none;">
+    <li><a href="https://sunflower-land.com/play/?ref=30911" target="_blank"><i class="fas fa-gamepad"></i> Sunflower-land</a></li>
+    <li><a href="https://discord.gg/sunflowerland" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+    <li><a href="https://github.com/sunflower-land/sunflower-land" target="_blank"><i class="fab fa-github"></i> Github</a></li>
+    <li><a href="https://docs.sunflower-land.com/" target="_blank"><i class="fas fa-book"></i> Docs</a></li>
+</ul>
+	
+	
+<div class="gas-tariff-container">
+  <div id="gasTariffContainer">Loading gas tariff...</div>
+  <div id="prices"></div>
+  <div id="lastUpdate" class="last-update">Last update: --:--:--</div>
+</div>
+
+    <!-- Botón para mostrar el convertidor de moneda -->
+    <button id="showCalculatorButton" class="show-calculator-button" aria-label="Show Currency Converter">Currency Converter</button>
+
+    <!-- Contenedor del convertidor de moneda -->
+    <section class="calculator" id="calculator" aria-labelledby="calculatorHeading">
+      <h2 id="calculatorHeading">Currency Converter</h2>
+      <div class="input-group">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" step="0.01" aria-required="true">
+      </div>
+	  
+	  
+      <div class="input-group">
+        <label for="from">From:</label>
+        <select id="from" name="from" aria-required="true">
+          <option value="sfl">SFL</option>
+          <option value="matic">MATIC</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="to">To:</label>
+        <select id="to" name="to" aria-required="true">
+          <option value="sfl">SFL</option>
+          <option value="matic">MATIC</option>
+          <option value="usd">USD</option>
+          <option value="eur">EUR</option>
+          <option value="sgd">SGD</option>
+          <option value="brl">BRL</option>
+          <option value="inr">INR</option>
+          <option value="rub">RUB</option>
+          <option value="uah">UAH</option>
+        </select>
+      </div>
+      <button id="convertButton" class="convert-button" aria-label="Convert Currency">Convert</button>
+      <div id="result"></div>
+    </section>
+
+    <!-- Contenedor de la barra de búsqueda -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search by item or price" aria-label="Search by item or price">
     </div>
 
-    <div id="priceData"></div>
+    <!-- Contenedor de los datos de precios -->
+    <section id="priceData" aria-live="polite"></section>
 
-    <div class="loading-container" id="loading">
+    <!-- Contenedor del indicador de carga -->
+    <div class="loading-container" id="loading" aria-hidden="true">
       <div class="loading-spinner"></div>
       <p>Loading prices...</p>
     </div>
 
-    <div class="donation-container">
-      <a href="#" class="donation-button" id="donationButton">
-        <img src="images\donate.png" alt="Donation Icon" class="donation-icon">
+    <!-- Contenedor del botón de donación -->
+<div class="donation-container">
+    <a href="#" class="donation-button" id="donationButton" aria-label="Donate">
+        <i class="fas fa-heart"></i> <!-- Font Awesome Heart Icon -->
         Donate
-      </a>
-    </div>
+    </a>
+</div>
 
-    <div class="donation-modal" id="donationModal">
+    <!-- Ventana modal de donación -->
+    <div class="donation-modal" id="donationModal" aria-hidden="true" role="dialog" aria-labelledby="donationModalHeading">
       <div class="donation-modal-content">
-        <span class="close-button">&times;</span>
+        <span class="close-button" aria-label="Close Donation Modal">&times;</span>
+        <h2 id="donationModalHeading">Donation Information</h2>
         <p>You can donate only Matic to the following wallet (Polygon Matic)</p>
         <p class="wallet-address">0xc218c27Ea8DBdEB83a8b539Ea1e36d2A54EB002c</p>
       </div>
     </div>
 
+    <!-- Texto de última actualización -->
     <p class="updated-text" id="updatedAt"></p>
 
- <div class="credits">
-    <p>Version: <span id="version"></span></p>
+    <!-- Créditos -->
+    <footer class="credits">
+      <p>Version: <em id="version"></em></p>
       <p>Developed by <a href="https://github.com/josevdr95new" target="_blank">josevdr95 and GPT 3.5</a></p>
-	  <p>API <a href="https://sfl.world/" target="_blank">sfl.world</a></p>
-      <p>Visit the <a href="https://github.com/josevdr95new/SFL-PricesP2P" target="_blank"> GitHub repository</a></p>
-    </div>
+      <p>API <a href="https://sfl.world/" target="_blank">sfl.world</a></p>
+	  <p>API <a href="https://polygonscan.com/" target="_blank">PolygonScan</a></p>
+	  <p>API <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a></p>
+      <p>Visit the <a href="https://github.com/josevdr95new/SFL-PricesP2P" target="_blank">GitHub repository</a></p>
+      <div class="disclaimer" id="disclaimerMessage">
+<p><strong>Disclaimer:</strong> The information provided on this website is for informational purposes only and should not be considered financial advice. The data is sourced from third-party platforms, and we do not take responsibility for any decisions made based on the information presented here.</p>
+    </div>    </div>
+   </footer>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
