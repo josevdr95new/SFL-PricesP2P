@@ -7,6 +7,8 @@ function fetchAndDisplayPrices() {
       const priceContainer = document.getElementById('priceData');
       const updatedAtElement = document.getElementById('updatedAt');
       const loadingContainer = document.getElementById('loading');
+	  // Limpiar el contenedor de precios antes de agregar la nueva tabla
+      priceContainer.innerHTML = '';
 
       // Crear la tabla de precios
       const tableElement = createPriceTable(priceData);
@@ -364,7 +366,7 @@ function showNotification(message, type = 'success') {
 function updateData() {
   updatePrices();
   loadGasTariff();
-  //fetchAndDisplayPrices();
+  fetchAndDisplayPrices();
 
   // Mostrar una notificación personalizada
   showNotification('Update data');
