@@ -364,7 +364,7 @@ function showNotification(message, type = 'success') {
 function updateData() {
   updatePrices();
   loadGasTariff();
-  fetchAndDisplayPrices();
+  //fetchAndDisplayPrices();
 
   // Mostrar una notificación personalizada
   showNotification('Update data');
