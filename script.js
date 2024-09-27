@@ -336,7 +336,7 @@ const pricesDiv = document.getElementById('prices');
 
                     pricesDiv.innerHTML = `
                         <p>SFL: $${sfl.current_price}</p>
-                        <p>MATIC: $${matic.current_price}</p>
+                        <p>POL: $${matic.current_price}</p>
                     `;
                 })
                 .catch(error => {
