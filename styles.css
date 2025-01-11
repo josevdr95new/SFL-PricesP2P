@@ -568,3 +568,49 @@ table td input[type="number"] {
 .donation-button i {
     margin-right: 8px; /* Ajusta el valor según sea necesario */
 }
+
+
+
+/* Botón de actualización */
+.refresh-button {
+  display: inline-flex; /* Uso de flexbox en línea */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+  background-color: #ff5722; /* Color de fondo naranja */
+  color: white; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  padding: 8px 12px; /* Relleno interno más pequeño */
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  font-family: 'Press Start 2P', cursive; /* Fuente personalizada */
+  border-radius: 4px; /* Bordes redondeados más pequeños */
+  cursor: pointer; /* Manito en cursor */
+  transition: background-color 0.3s, transform 0.3s; /* Transición de color y transformación */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  position: relative; /* Posición relativa para el efecto de carga */
+  overflow: hidden; /* Ocultar desbordamiento */
+  margin-left: 10px; /* Margen a la izquierda */
+}
+
+/* Efecto hover en el botón de actualización */
+.refresh-button:hover {
+  background-color: #e64a19; /* Color de fondo al pasar el ratón */
+  transform: scale(1.05); /* Escalar */
+}
+
+/* Icono de actualización */
+.refresh-button i {
+  margin-right: 6px; /* Espacio a la derecha del icono más pequeño */
+  font-size: 16px; /* Tamaño del icono más pequeño */
+  transition: transform 0.3s; /* Transición de transformación */
+}
+
+/* Efecto de giro en el icono */
+.refresh-button.loading i {
+  animation: spin 1s linear infinite; /* Animación de giro */
+}
+
+/* Animación de giro */
+@keyframes spin {
+  from { transform: rotate(0deg); } /* Inicio */
+  to { transform: rotate(360deg); } /* Fin */
+}

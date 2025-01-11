@@ -15,21 +15,20 @@
       <h1>SFL Prices P2P</h1>
     </header>
 	
-<button id="linkButton"><i class="fas fa-link"></i></button>
+    <button id="linkButton"><i class="fas fa-link"></i></button>
 
-<ul id="myList" style="display: none;">
-    <li><a href="https://sunflower-land.com/play/?ref=30911" target="_blank"><i class="fas fa-gamepad"></i> Sunflower-land</a></li>
-    <li><a href="https://discord.gg/sunflowerland" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-    <li><a href="https://github.com/sunflower-land/sunflower-land" target="_blank"><i class="fab fa-github"></i> Github</a></li>
-    <li><a href="https://docs.sunflower-land.com/" target="_blank"><i class="fas fa-book"></i> Docs</a></li>
-</ul>
+    <ul id="myList" style="display: none;">
+        <li><a href="https://sunflower-land.com/play/?ref=30911" target="_blank"><i class="fas fa-gamepad"></i> Sunflower-land</a></li>
+        <li><a href="https://discord.gg/sunflowerland" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+        <li><a href="https://github.com/sunflower-land/sunflower-land" target="_blank"><i class="fab fa-github"></i> Github</a></li>
+        <li><a href="https://docs.sunflower-land.com/" target="_blank"><i class="fas fa-book"></i> Docs</a></li>
+    </ul>
 	
-	
-<div class="gas-tariff-container">
-  <div id="gasTariffContainer">Loading gas tariff...</div>
-  <div id="prices"></div>
-  <div id="lastUpdate" class="last-update">Last update: --:--:--</div>
-</div>
+    <div class="gas-tariff-container">
+      <div id="gasTariffContainer">Loading gas tariff...</div>
+      <div id="prices"></div>
+      <div id="lastUpdate" class="last-update">Last update: --:--:--</div>
+    </div>
 
     <!-- Botón para mostrar el convertidor de moneda -->
     <button id="showCalculatorButton" class="show-calculator-button" aria-label="Show Currency Converter">Currency Converter</button>
@@ -41,8 +40,6 @@
         <label for="amount">Amount:</label>
         <input type="number" id="amount" name="amount" step="0.01" aria-required="true">
       </div>
-	  
-	  
       <div class="input-group">
         <label for="from">From:</label>
         <select id="from" name="from" aria-required="true">
@@ -71,6 +68,7 @@
     <!-- Contenedor de la barra de búsqueda -->
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="Search by item or price" aria-label="Search by item or price">
+      <button id="refreshButton" class="refresh-button" aria-label="Refresh Data"><i class="fas fa-sync-alt"></i></button>
     </div>
 
     <!-- Contenedor de los datos de precios -->
@@ -83,12 +81,12 @@
     </div>
 
     <!-- Contenedor del botón de donación -->
-<div class="donation-container">
-    <a href="#" class="donation-button" id="donationButton" aria-label="Donate">
-        <i class="fas fa-heart"></i> <!-- Font Awesome Heart Icon -->
-        Donate
-    </a>
-</div>
+    <div class="donation-container">
+        <a href="#" class="donation-button" id="donationButton" aria-label="Donate">
+            <i class="fas fa-heart"></i> <!-- Font Awesome Heart Icon -->
+            Donate
+        </a>
+    </div>
 
     <!-- Ventana modal de donación -->
     <div class="donation-modal" id="donationModal" aria-hidden="true" role="dialog" aria-labelledby="donationModalHeading">
@@ -108,13 +106,13 @@
       <p>Version: <em id="version"></em></p>
       <p>Developed by <a href="https://github.com/josevdr95new" target="_blank">josevdr95 and GPT 3.5</a></p>
       <p>API <a href="https://sfl.world/" target="_blank">sfl.world</a></p>
-	  <p>API <a href="https://polygonscan.com/" target="_blank">PolygonScan</a></p>
-	  <p>API <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a></p>
+      <p>API <a href="https://polygonscan.com/" target="_blank">PolygonScan</a></p>
+      <p>API <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a></p>
       <p>Visit the <a href="https://github.com/josevdr95new/SFL-PricesP2P" target="_blank">GitHub repository</a></p>
       <div class="disclaimer" id="disclaimerMessage">
-<p><strong>Disclaimer:</strong> The information provided on this website is for informational purposes only and should not be considered financial advice. The data is sourced from third-party platforms, and we do not take responsibility for any decisions made based on the information presented here.</p>
-    </div>    </div>
-   </footer>
+        <p><strong>Disclaimer:</strong> The information provided on this website is for informational purposes only and should not be considered financial advice. The data is sourced from third-party platforms, and we do not take responsibility for any decisions made based on the information presented here.</p>
+      </div>
+    </footer>
   </div>
   <script src="script.js"></script>
 </body>
